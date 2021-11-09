@@ -15,4 +15,9 @@ storage/*.key
 Homestead.yaml
 Homestead.json
 
-
+.env.example
+artisan
+composer.json
+composer.lock
+phpunit.xml
+server.php
