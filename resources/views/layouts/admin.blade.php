@@ -22,8 +22,9 @@
         <header class="main-header">
 
             <a href="" class="logo" style="background-color: #AF252D;">
-                <span class="logo-mini"><b>C&</b>V</span>
-                <span class="logo-lg"><b>Compra & Ventas</b></span>
+                <span class="logo-mini"><b>F</b>LG</span>
+                <span class="logo-lg"><b>Ferreteria</b></span>
+                <span class="logo-lg"><b>Largaespada</b></span>
             </a>
 
             <nav class="navbar navbar-static-top bg-red" role="navigation">
@@ -138,16 +139,17 @@
                         </ul>
                     </li>
 
-                    <li class="treeview">
+                    <!-- <li class="treeview">
                         <a href="#">
                             <i class="fa fa-plus-square"></i> <span>Reportes</span>
                             <small class="label pull-right bg-red">PDF</small>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="{{url('seguridad/usuario')}}"><i class="fa fa-circle-o"></i> Ventas</a></li>
+                            <li><a href="{{ url('almacen/articulo/articuloPDF')}}"><i class="fa fa-circle-o"></i>
+                                    Articulos</a></li>
 
                         </ul>
-                    </li>
+                    </li> -->
 
                     <!-- <li>
                         <a href="#">
@@ -176,7 +178,9 @@
                     <div class="col-md-12">
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Sistema de Ventas</h3>
+                                <h3 class="box-title"><b> Sistema de Ventas </b> - <span
+                                        style="text-transform: uppercase;"><i>Ferreteria Largaespada</i></span>
+                                </h3>
                                 <div class="box-tools pull-right">
                                     <button class="btn btn-box-tool" data-widget="collapse"><i
                                             class="fa fa-minus"></i></button>

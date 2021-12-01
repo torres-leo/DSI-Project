@@ -21,7 +21,7 @@
                     <th class="text-center">Tipo Comprobante</th>
                     <th class="text-center">Impuesto</th>
                     <th class="text-center">Total</th>
-                    <th class="text-center">Estado</th>
+                    <!-- <th class="text-center">Estado</th> -->
                     <th class="text-center">Opciones</th>
                 </thead>
                 @foreach ($ingresos as $ing)
@@ -33,13 +33,13 @@
                     </td>
                     <td class="text-center" style="vertical-align: middle"> {{ $ing->impuesto}} </td>
                     <td class="text-center" style="vertical-align: middle"> {{ $ing->total}} </td>
-                    <td class="text-center" style="vertical-align: middle"> {{ $ing->estado}} </td>
+                    <!-- <td class="text-center" style="vertical-align: middle"> {{ $ing->estado}} </td> -->
                     <!-- BOTONES -->
                     <td class="text-center" style="vertical-align: middle">
                         <a href="{{ URL::action('IngresoController@show', $ing->idIngreso) }}"><button
-                                class="btn btn-primary" style="margin-right: 5px;">Detalles</button></a>
-                        <a href="" data-target="#modal-delete-{{ $ing->idIngreso }}" data-toggle="modal"><button
-                                class="btn btn-danger">Anular</button></a>
+                                class="btn btn-primary" style="margin-right: 5px;">Detalle</button></a>
+                        <!-- <a href="" data-target="#modal-delete-{{ $ing->idIngreso }}" data-toggle="modal"><button
+                                class="btn btn-danger">Anular</button></a> -->
                     </td>
                     <!-- FIN BOTONES -->
                 </tr>

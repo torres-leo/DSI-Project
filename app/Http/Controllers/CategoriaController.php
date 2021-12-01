@@ -25,7 +25,7 @@ class CategoriaController extends Controller
                 ->where('nombre', 'LIKE', '%' . $query . '%', 'OR', 'descripcion', 'LIKE', '%' . $query . '%')
                 // ->orwhere('descripcion', 'LIKE', '%' . $query . '%') //Haciendolo de esta forma no funciona
                 ->where('condicion', '=', '1')
-                ->orderBy('idCategoria', 'asc')
+                ->orderBy('idCategoria', 'desc')
                 ->paginate(7);
 
             return view('almacen.categoria.index', ["categorias" => $categorias, "searchText" => $query]);

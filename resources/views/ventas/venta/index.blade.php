@@ -21,7 +21,7 @@
                     <th class="text-center">Tipo Comprobante</th>
                     <th class="text-center">Impuesto</th>
                     <th class="text-center">Total</th>
-                    <th class="text-center">Estado</th>
+                    <!-- <th class="text-center">Estado</th> -->
                     <th class="text-center">Opciones</th>
                 </thead>
                 @foreach ($ventas as $ven)
@@ -33,13 +33,13 @@
                     </td>
                     <td class="text-center" style="vertical-align: middle"> {{ $ven->impuesto}} </td>
                     <td class="text-center" style="vertical-align: middle"> {{ $ven->totalVenta}} </td>
-                    <td class="text-center" style="vertical-align: middle"> {{ $ven->estado}} </td>
+                    <!-- <td class="text-center" style="vertical-align: middle"> {{ $ven->estado}} </td> -->
                     <!-- BOTONES -->
                     <td class="text-center" style="vertical-align: middle">
                         <a href="{{ URL::action('VentaController@show', $ven->idVenta) }}"><button
                                 class="btn btn-primary" style="margin-right: 5px;">Detalles</button></a>
-                        <a href="" data-target="#modal-delete-{{ $ven->idVenta }}" data-toggle="modal"><button
-                                class="btn btn-danger">Finalizar</button></a>
+                        <!-- <a href="" data-target="#modal-delete-{{ $ven->idVenta }}" data-toggle="modal"><button
+                                class="btn btn-danger">Finalizar</button></a> -->
                     </td>
                     <!-- FIN BOTONES -->
                 </tr>

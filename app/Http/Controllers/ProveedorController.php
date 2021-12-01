@@ -26,7 +26,7 @@ class ProveedorController extends Controller
                 ->where('tipoPersona', '=', 'Proveedor')
                 ->orwhere('numDocumento', 'LIKE', '%' . $query . '%')
                 ->where('tipoPersona', '=', 'Proveedor')
-                ->orderBy('idPersona', 'asc')
+                ->orderBy('idPersona', 'desc')
                 ->paginate(7);
 
             return view('compras.proveedor.index', ["personas" => $personas, "searchText" => $query]);

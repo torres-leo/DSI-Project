@@ -31,7 +31,7 @@
     <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
         <div class="form-group">
             <label for="nombre">Nombre del articulo</label>
-            <input type="text" name="nombre" required value="{{ $articulo->articulo }}" class="form-control" </div>
+            <input type="text" name="nombre" required value="{{ $articulo->nombre }}" class="form-control" </div>
         </div>
 
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">

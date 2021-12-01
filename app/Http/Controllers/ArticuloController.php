@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
 use CompraVenta\Http\Requests\ArticuloFormRequest;
 use DB;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class ArticuloController extends Controller
 {
@@ -37,7 +38,7 @@ class ArticuloController extends Controller
                 )
                 ->where('a.nombre', 'LIKE', '%' . $query . '%', 'OR', 'a.descripcion', 'LIKE', '%' . $query . '%')
                 ->orwhere('a.codigo', 'LIKE', '%' . $query . '%')
-                ->orderBy('idArticulo', 'asc')
+                ->orderBy('idArticulo', 'desc')
                 ->paginate(7);
 
             return view('almacen.articulo.index', ["articulos" => $articulos, "searchText" => $query]);
@@ -96,7 +97,15 @@ class ArticuloController extends Controller
         $articulo->codigo = $request->get('codigo');
         $articulo->nombre = $request->get('nombre');
         $articulo->stock = $request->get('stock');
+        $stockTemp = $articulo->stock;
         $articulo->descripcion = $request->get('descripcion');
+
+        if ($stockTemp == 0) {
+            $articulo->estado = 'Inactivo';
+        } else {
+            $articulo->estado = 'Activo';
+        }
+
         // CARGANDO LA IMAGEN
         if (Input::hasFile('imagen')) {
             $file = Input::file('imagen');
@@ -116,4 +125,29 @@ class ArticuloController extends Controller
         $articulo->update();
         return Redirect::to('almacen/articulo');
     }
+
+    // public function exportToPDF()
+    // {
+    //     // $articulos = Articulo::get();
+    //     // $articulos = DB::table('articulo')->where('estado', '=', 'Activo')->get();
+
+    //     $articulos = DB::table('articulo as a')
+    //         ->join('categoria as c', 'a.idCategoria', '=', 'c.idCategoria')
+    //         ->select(
+    //             'a.idArticulo',
+    //             'a.nombre',
+    //             'a.codigo',
+    //             'a.stock',
+    //             'c.nombre as categoria',
+    //             'a.descripcion',
+    //             'a.imagen',
+    //             'a.estado'
+    //         )
+    //         ->orderBy('idArticulo', 'desc')
+    //         ->get();
+
+    //     $pdf = PDF::loadView('articulo.exportToPDF', compact('articulos'));
+    //     // return $pdf->download('ListaArticulos.pdf');
+    //     return $pdf->stream();
+    // }
 }
