@@ -3,6 +3,9 @@
 namespace CompraVenta\Http\Requests;
 
 use CompraVenta\Http\Requests\Request;
+use Illuminate\Validation\Rule;
+use Validator;
+use Auth;
 
 class UsuarioFormRequest extends Request
 {
@@ -23,10 +26,11 @@ class UsuarioFormRequest extends Request
      */
     public function rules()
     {
+
         return [
             'name' => 'required|max:255',
-            'email' => 'required|string|email|max:255|unique:users,id' . $this->id,
-            // 'email' => 'required|email|max:255|unique:users', // Este no porque da error al no modificarle el correo al usuario
+            // 'email' => 'required|string|email|max:255|unique:users,email,' . $this->id, // to create
+            'email' => 'required|string|email|max:255|unique:users,id,' . $this->id, // to update
             'password' => 'required|min:6|confirmed',
         ];
     }

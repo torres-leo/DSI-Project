@@ -6,9 +6,9 @@
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
         <h3> Listado de Articulos <a href="articulo/create" style="margin-left: 15px;">
                 <button class='btn btn-success'><b>Agregar Articulo</b></button></a>
-            <a href="articulo/exportToPDF" style="margin-left: 15px;">
+            <!-- <a href="articulo/exportToPDF" style="margin-left: 15px;">
                 <button class='btn btn-primary'><b>Generar Reporte <small class="label bg-red">PDF</small>
-                    </b></button></a>
+                    </b></button></a> -->
         </h3>
         @include('almacen.articulo.search')
     </div>
@@ -36,13 +36,13 @@
                     <td class="text-center" style="vertical-align: middle">{{ $art->codigo}}</td>
                     <td class="text-center" style="vertical-align: middle">{{ $art->categoria}}</td>
                     <td class="text-center" style="vertical-align: middle">{{ $art->descripcion}}</td>
-                    <td class="text-center" style="vertical-align: middle">{{ $art->stock}}</td>
+                    <td class="text-center" style="vertical-align: middle" id="stock">{{ $art->stock}}</td>
                     <td class="text-center">
                         <img src="{{ asset('imagenes/articulos/'.$art->imagen) }}" alt="{{ $art->nombre }}"
                             height="100px" width="100px" class="img-thumbnail"
                             style="background-color: brown; filter: brightness(95%);">
                     </td>
-                    <td class="text-center" style="vertical-align: middle">{{ $art->estado}}</td>
+                    <td class="text-center" style="vertical-align: middle" id="estado">{{ $art->estado}}</td>
 
                     <!-- BOTONES -->
                     <td class="text-center" style="vertical-align: middle">
@@ -62,3 +62,20 @@
 </div>
 
 @endsection
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    actualizar();
+});
+
+function actualizar() {
+    var stock = querySelector('#stock');
+    var estado = querySelector('#estado');
+
+    if (stock === 0) {
+        estado = 'Inactivo';
+    }
+
+
+}
+</script>

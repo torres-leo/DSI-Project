@@ -29,7 +29,7 @@ class PersonaFormRequest extends Request
             'numDocumento' => 'required|max:22',
             'direccion' => 'max:400',
             'telefono' => 'min:8|max:16',
-            'email' => 'max:50',
+            'email' => 'string|email|max:255|unique:persona,idPersona' . $this->idPersona,
         ];
     }
 }

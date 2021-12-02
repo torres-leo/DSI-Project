@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use CompraVenta\Http\Requests\UsuarioFormRequest;
 use DB;
 
+
 class UsuarioController extends Controller
 {
     public function __construct()
@@ -41,6 +42,7 @@ class UsuarioController extends Controller
         $usuario->name = $request->get('name');
         $usuario->email = $request->get('email');
         $usuario->password = bcrypt($request->get('password'));
+
         $usuario->save();
         return Redirect::to('seguridad/usuario');
     }

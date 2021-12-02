@@ -139,7 +139,7 @@
                         </ul>
                     </li>
 
-                    <!-- <li class="treeview">
+                    <li class="treeview">
                         <a href="#">
                             <i class="fa fa-plus-square"></i> <span>Reportes</span>
                             <small class="label pull-right bg-red">PDF</small>
@@ -149,7 +149,7 @@
                                     Articulos</a></li>
 
                         </ul>
-                    </li> -->
+                    </li>
 
                     <!-- <li>
                         <a href="#">

@@ -25,7 +25,7 @@ class ArticuloFormRequest extends Request
     {
         return [
             'idCategoria' => 'required',
-            'codigo' => 'required|max:50|unique:articulo',
+            'codigo' => 'required|string|max:50|unique:articulo,idArticulo' . $this->idArticulo,
             'nombre' => 'required|max:100',
             'stock' => 'required|numeric|min:0',
             'descripcion' => 'max:400',

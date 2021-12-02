@@ -19,7 +19,7 @@
                     <th class="text-center">Fecha</th>
                     <th class="text-center">Cliente</th>
                     <th class="text-center">Tipo Comprobante</th>
-                    <th class="text-center">Impuesto</th>
+                    <!-- <th class="text-center">Impuesto</th> -->
                     <th class="text-center">Total</th>
                     <!-- <th class="text-center">Estado</th> -->
                     <th class="text-center">Opciones</th>
@@ -31,7 +31,7 @@
                     <td class="text-center" style="vertical-align: middle">
                         {{ $ven->tipoComprobante. ': '. $ven->serieComprobante.'-'.$ven->numComprobante}}
                     </td>
-                    <td class="text-center" style="vertical-align: middle"> {{ $ven->impuesto}} </td>
+                    <!-- <td class="text-center" style="vertical-align: middle"> {{ $ven->impuesto}} </td> -->
                     <td class="text-center" style="vertical-align: middle"> {{ $ven->totalVenta}} </td>
                     <!-- <td class="text-center" style="vertical-align: middle"> {{ $ven->estado}} </td> -->
                     <!-- BOTONES -->

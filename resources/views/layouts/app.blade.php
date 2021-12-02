@@ -47,7 +47,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Proyecto<b>Beta</b>
+                    Ferreteria <b>Largaespada</b>
                 </a>
             </div>
 
