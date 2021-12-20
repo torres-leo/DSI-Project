@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+.panel {
+    opacity: 0.9 !important;
+    background-color: #e1e1e1;
+}
+</style>
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

@@ -23,6 +23,10 @@
     <style>
     body {
         font-family: 'Lato';
+        background-image: url('https://cdn.pixabay.com/photo/2019/03/29/04/35/tools-4088531_960_720.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom bottom;
     }
 
     .fa-btn {
@@ -32,7 +36,7 @@
 </head>
 
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top" style="background-color: #3c8dbc;">
         <div class="container">
             <div class="navbar-header">
 
@@ -46,7 +50,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}" style="color: black;">
                     Ferreteria <b>Largaespada</b>
                 </a>
             </div>
@@ -61,7 +65,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                    <li><a href="{{ url('/login') }}">Login</a></li>
+                    <li><a href="{{ url('/login') }}" style="color: black;">Login</a></li>
                     <!-- <li><a href="{{ url('/register') }}">Nuevo usuario 🙍‍♂️</a></li> -->
                     @else
                     <li class="dropdown">
