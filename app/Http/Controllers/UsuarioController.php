@@ -9,6 +9,8 @@ use CompraVenta\user;
 use Illuminate\Support\Facades\Redirect;
 use CompraVenta\Http\Requests\UsuarioFormRequest;
 use DB;
+use Barryvdh\DomPDF\Facade as PDF;
+
 
 
 class UsuarioController extends Controller
@@ -66,5 +68,14 @@ class UsuarioController extends Controller
     {
         $usuario = DB::table('users')->where('id', '=', $id)->delete();
         return Redirect::to('seguridad/usuario');
+    }
+
+
+    public function userPDF()
+    {
+        $users = User::get();
+        $pdf = PDF::loadView('seguridad.usuario.userPDF', compact('users'));
+        return $pdf->stream('ListaUsuarios.pdf');
+        // return $pdf->download('ListaUsuarios.pdf');
     }
 }

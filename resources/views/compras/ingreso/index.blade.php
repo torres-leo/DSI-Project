@@ -19,7 +19,7 @@
                     <th class="text-center">Fecha</th>
                     <th class="text-center">Proveedor</th>
                     <th class="text-center">Tipo Comprobante</th>
-                    <th class="text-center">Impuesto</th>
+                    <!-- <th class="text-center">Impuesto</th> -->
                     <th class="text-center">Total</th>
                     <!-- <th class="text-center">Estado</th> -->
                     <th class="text-center">Opciones</th>
@@ -31,7 +31,7 @@
                     <td class="text-center" style="vertical-align: middle">
                         {{ $ing->tipoComprobante. ': '. $ing->serieComprobante.'-'.$ing->numComprobante}}
                     </td>
-                    <td class="text-center" style="vertical-align: middle"> {{ $ing->impuesto}} </td>
+                    <!-- <td class="text-center" style="vertical-align: middle"> {{ $ing->impuesto}} </td> -->
                     <td class="text-center" style="vertical-align: middle"> {{ $ing->total}} </td>
                     <!-- <td class="text-center" style="vertical-align: middle"> {{ $ing->estado}} </td> -->
                     <!-- BOTONES -->

@@ -6,9 +6,9 @@
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
         <h3> Listado de Articulos <a href="articulo/create" style="margin-left: 15px;">
                 <button class='btn btn-success'><b>Agregar Articulo</b></button></a>
-            <!-- <a href="articulo/exportToPDF" style="margin-left: 15px;">
-                <button class='btn btn-primary'><b>Generar Reporte <small class="label bg-red">PDF</small>
-                    </b></button></a> -->
+            <a href=" {{ route('articulos.pdf') }} " style="margin-left: 15px;">
+                <button class='btn btn-danger'><b>Generar Reporte <small class="label bg-primary">PDF</small>
+                    </b></button></a>
         </h3>
         @include('almacen.articulo.search')
     </div>

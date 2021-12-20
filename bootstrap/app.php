@@ -12,7 +12,7 @@
 */
 
 $app = new Illuminate\Foundation\Application(
-    realpath(__DIR__.'/../')
+    realpath(__DIR__ . '/../')
 );
 
 /*
@@ -40,6 +40,10 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     CompraVenta\Exceptions\Handler::class
 );
+
+// $app->register(\Barryvdh\DomPDF\ServiceProvider::class);
+// $app->configure('dompdf');
+
 
 /*
 |--------------------------------------------------------------------------

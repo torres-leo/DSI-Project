@@ -157,6 +157,8 @@ return [
         CompraVenta\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
+
 
 
 
@@ -208,8 +210,6 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
-
-
     ],
 
 ];

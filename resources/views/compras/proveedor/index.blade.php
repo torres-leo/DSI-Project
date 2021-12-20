@@ -4,8 +4,11 @@
 
 <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-        <h3> Lista de Proveedores <a href="proveedor/create" style="margin-left: 15px;"><button class='btn btn-success'>
-                    <b>Agregar Proveedor</b></button></a>
+        <h3> Lista de Proveedores <a href="proveedor/create" style="margin-left: 15px;">
+                <button class='btn btn-success'><b>Agregar Proveedor</b></button></a>
+            <a href=" {{ route('proveedor.pdf') }} " style="margin-left: 15px;">
+                <button class='btn btn-danger'><b>Generar Reporte <small class="label bg-primary">PDF</small>
+                    </b></button></a>
         </h3>
         @include('compras.proveedor.search')
     </div>

@@ -4,8 +4,12 @@
 
 <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-        <h3> Lista de Clientes <a href="cliente/create" style="margin-left: 15px;"><button class='btn btn-success'>
-                    <b>Agregar Cliente</b></button></a>
+        <h3> Lista de Clientes
+            <a href="cliente/create" style="margin-left: 15px;"><button class='btn btn-success'> <b>Agregar
+                        Cliente</b></button></a>
+            <a href=" {{ route('cliente.pdf') }} " style="margin-left: 15px;">
+                <button class='btn btn-danger'><b>Generar Reporte <small class="label bg-primary">PDF</small>
+                    </b></button></a>
         </h3>
         @include('ventas.cliente.search')
     </div>

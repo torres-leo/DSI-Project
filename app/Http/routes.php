@@ -11,12 +11,22 @@
 |
 */
 
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\App\Articulo;
+
 Route::get('/', function () {
     return view('auth/login');
 });
 
 Route::resource('almacen/categoria', 'CategoriaController');
 Route::resource('almacen/articulo', 'ArticuloController');
+
+Route::get('articulo-pdf', 'ArticuloController@artPDF')->name('articulos.pdf');
+Route::get('categoria-pdf', 'CategoriaController@catPDF')->name('categorias.pdf');
+Route::get('usuario-pdf', 'UsuarioController@UserPDF')->name('usuario.pdf');
+Route::get('Proveedor-pdf', 'ProveedorController@provPDF')->name('proveedor.pdf');
+Route::get('Cliente-pdf', 'ClienteController@clientPDF')->name('cliente.pdf');
+
 Route::resource('ventas/cliente', 'ClienteController');
 Route::resource('compras/proveedor', 'ProveedorController');
 Route::resource('compras/ingreso', 'IngresoController');
@@ -26,5 +36,3 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/{slug?}', 'HomeController@index');
-
-// Route::get('almacen/articulo', 'ArticuloController@exportToPDF')->name('articulos.pdf');

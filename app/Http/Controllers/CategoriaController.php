@@ -8,6 +8,8 @@ use CompraVenta\Categoria;
 use Illuminate\Support\Facades\Redirect;
 use CompraVenta\Http\Requests\CategoriaFormRequest;
 use DB;
+use Barryvdh\DomPDF\Facade as PDF;
+
 
 class CategoriaController extends Controller
 {
@@ -74,5 +76,14 @@ class CategoriaController extends Controller
         $categoria->condicion = '0';
         $categoria->update();
         return Redirect::to('almacen/categoria');
+    }
+
+    public function catPDF()
+    {
+        $categorias = DB::table('categoria')->get();
+
+        $pdf = PDF::loadView('almacen.categoria.catPDF', compact('categorias'));
+        return $pdf->stream('ListaCategorias.pdf');
+        // return $pdf->download('ListaCategorias.pdf');
     }
 }

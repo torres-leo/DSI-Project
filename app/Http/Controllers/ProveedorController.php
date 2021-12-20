@@ -9,6 +9,8 @@ use CompraVenta\Persona;
 use Illuminate\Support\Facades\Redirect;
 use CompraVenta\Http\Requests\PersonaFormRequest;
 use DB;
+use Barryvdh\DomPDF\Facade as PDF;
+
 
 class ProveedorController extends Controller
 {
@@ -83,5 +85,19 @@ class ProveedorController extends Controller
         $persona->tipoPersona = 'Inactivo';
         $persona->update();
         return Redirect::to('compras/proveedor');
+    }
+
+    public function provPDF()
+    {
+        // $proveedores = Persona::get();
+        // $proveedores = Persona::all()->where('tipoPersona', '=', 'Proveedor');
+
+        $proveedores = DB::table('persona')
+            ->where('tipoPersona', '=', 'Proveedor')
+            ->get();
+
+        $pdf = PDF::loadView('compras.proveedor.provPDF', compact('proveedores'));
+        return $pdf->stream('ListaProveedores.pdf');
+        // return $pdf->download('ListaCategorias.pdf');
     }
 }

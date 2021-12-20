@@ -21,21 +21,21 @@
 
         <header class="main-header">
 
-            <a href="" class="logo" style="background-color: #AF252D;">
+            <a href="" class="logo" style="background-color: #3c8dbc;">
                 <span class="logo-mini"><b>F</b>LG</span>
                 <span class="logo-lg"><b>Ferreteria</b></span>
                 <span class="logo-lg"><b>Largaespada</b></span>
             </a>
 
-            <nav class="navbar navbar-static-top bg-red" role="navigation">
+            <nav class="navbar navbar-static-top bg-info" role="navigation">
                 <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                     <span class="sr-only">Navegación</span>
                 </a>
-                <div class="navbar-custom-menu bg-red">
+                <div class="navbar-custom-menu bg-info">
                     <ul class="nav navbar-nav">
-                        <li class="dropdown user user-menu" style="background-color: #AF252D;">
+                        <li class="dropdown user user-menu" style="background-color: #3c8dbc;">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <small class="bg-green"
+                                <small class="bg-red"
                                     style="color: black; padding: 1px; margin-right: 2px;">Online</small>
                                 <span class="hidden-xs">{{ Auth::user()->name }}</span>
                             </a>
@@ -98,7 +98,8 @@
                         <ul class="treeview-menu">
                             <li><a href="{{ url('almacen/articulo') }}"><i class="fa fa-circle-o"></i> Artículos</a>
                             </li>
-                            <li><a href="{{ url('almacen/categoria') }}"><i class="fa fa-circle-o"></i> Categorías</a>
+                            <li><a href="{{ url('almacen/categoria') }}"><i class="fa fa-circle-o"></i>
+                                    Categorías</a>
                             </li>
                         </ul>
                     </li>
@@ -139,17 +140,17 @@
                         </ul>
                     </li>
 
-                    <li class="treeview">
+                    <!-- <li class="treeview">
                         <a href="#">
                             <i class="fa fa-plus-square"></i> <span>Reportes</span>
                             <small class="label pull-right bg-red">PDF</small>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="{{ url('almacen/articulo/articuloPDF')}}"><i class="fa fa-circle-o"></i>
+                            <li><a href="{{ url('reportes/articulos.php')}}"><i class="fa fa-circle-o"></i>
                                     Articulos</a></li>
 
                         </ul>
-                    </li>
+                    </li> -->
 
                     <!-- <li>
                         <a href="#">

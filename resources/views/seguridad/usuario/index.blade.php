@@ -4,9 +4,11 @@
 
 <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-        <h3> Listado de Usuarios <a href="usuario/create" style="margin-left: 15px;"><button class='btn btn-success'>
-                    <b>Agregar
-                        Usuario</b></button></a>
+        <h3> Listado de Usuarios <a href="usuario/create" style="margin-left: 15px;">
+                <button class='btn btn-success'><b>Agregar Usuario</b></button></a>
+            <a href=" {{ route('usuario.pdf') }} " style="margin-left: 15px;">
+                <button class='btn btn-danger'><b>Generar Reporte <small class="label bg-primary">PDF</small>
+                    </b></button></a>
         </h3>
         @include('seguridad.usuario.search')
     </div>
