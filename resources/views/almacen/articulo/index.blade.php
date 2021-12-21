@@ -31,7 +31,7 @@
                 </thead>
                 @foreach ($articulos as $art)
                 <tr>
-                    <td class="text-center" style="vertical-align: middle">{{ $art->idArticulo }})</td>
+                    <td class="text-center" style="vertical-align: middle">{{ $art->idArticulo }}</td>
                     <td class="text-center" style="vertical-align: middle">{{ $art->nombre }}</td>
                     <td class="text-center" style="vertical-align: middle">{{ $art->codigo}}</td>
                     <td class="text-center" style="vertical-align: middle">{{ $art->categoria}}</td>

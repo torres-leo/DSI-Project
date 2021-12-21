@@ -23,6 +23,8 @@ class VentaFormRequest extends Request
      */
     public function rules()
     {
+        // INGRESAR LAS VALIDACIONES DE CADA PARAMETRO
+
         return [
             'idCliente' => 'required',
             'tipoComprobante' => 'required|max:20',

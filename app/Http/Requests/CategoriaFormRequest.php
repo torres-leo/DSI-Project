@@ -23,6 +23,8 @@ class CategoriaFormRequest extends Request
      */
     public function rules()
     {
+        // INGRESAR LAS VALIDACIONES DE CADA PARAMETRO
+
         return [
             'nombre' => 'required|max:50',
             'descripcion' => 'max:50',

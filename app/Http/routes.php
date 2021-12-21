@@ -18,21 +18,22 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
+// ACA VAN TODAS LAS VISTAS PARA CADA UNO DE LOS MODULOS
 Route::resource('almacen/categoria', 'CategoriaController');
 Route::resource('almacen/articulo', 'ArticuloController');
-
-Route::get('articulo-pdf', 'ArticuloController@artPDF')->name('articulos.pdf');
-Route::get('categoria-pdf', 'CategoriaController@catPDF')->name('categorias.pdf');
-Route::get('usuario-pdf', 'UsuarioController@UserPDF')->name('usuario.pdf');
-Route::get('Proveedor-pdf', 'ProveedorController@provPDF')->name('proveedor.pdf');
-Route::get('Cliente-pdf', 'ClienteController@clientPDF')->name('cliente.pdf');
-
 Route::resource('ventas/cliente', 'ClienteController');
 Route::resource('compras/proveedor', 'ProveedorController');
 Route::resource('compras/ingreso', 'IngresoController');
 Route::resource('ventas/venta', 'VentaController');
 Route::resource('seguridad/usuario', 'UsuarioController');
 Route::auth();
+
+// ACÁ VAN LAS VISTAS DE LOS METODOS QUE GENERAN EL PDF
+Route::get('articulo-pdf', 'ArticuloController@artPDF')->name('articulos.pdf');
+Route::get('categoria-pdf', 'CategoriaController@catPDF')->name('categorias.pdf');
+Route::get('usuario-pdf', 'UsuarioController@UserPDF')->name('usuario.pdf');
+Route::get('Proveedor-pdf', 'ProveedorController@provPDF')->name('proveedor.pdf');
+Route::get('Cliente-pdf', 'ClienteController@clientPDF')->name('cliente.pdf');
 
 Route::get('/home', 'HomeController@index');
 Route::get('/{slug?}', 'HomeController@index');

@@ -26,6 +26,7 @@ class UsuarioFormRequest extends Request
      */
     public function rules()
     {
+        // INGRESAR LAS VALIDACIONES DE CADA PARAMETRO
 
         return [
             'name' => 'required|max:255',

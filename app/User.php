@@ -5,6 +5,7 @@ namespace CompraVenta;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\Permission\Traits\HasRoles;
 
+// OBTENIENDO LAS VARIABLES A TOMAR DE LA TABLA
 
 class User extends Authenticatable
 {

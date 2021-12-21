@@ -23,6 +23,8 @@ class IngresoFormRequest extends Request
      */
     public function rules()
     {
+        // INGRESAR LAS VALIDACIONES DE CADA PARAMETRO
+
         return [
             'idProveedor' => 'required',
             'tipoComprobante' => 'required|max:20',

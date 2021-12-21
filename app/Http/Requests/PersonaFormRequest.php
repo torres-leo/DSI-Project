@@ -23,6 +23,8 @@ class PersonaFormRequest extends Request
      */
     public function rules()
     {
+        // INGRESAR LAS VALIDACIONES DE CADA PARAMETRO
+
         return [
             'nombre' => 'required|max:100',
             'tipoDocumento' => 'required|max:20',

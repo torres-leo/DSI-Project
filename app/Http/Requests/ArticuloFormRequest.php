@@ -23,6 +23,7 @@ class ArticuloFormRequest extends Request
      */
     public function rules()
     {
+        // INGRESAR LAS VALIDACIONES DE CADA PARAMETRO
         return [
             'idCategoria' => 'required',
             'codigo' => 'required|string|max:50|unique:articulo,idArticulo' . $this->idArticulo,

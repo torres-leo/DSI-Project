@@ -9,6 +9,7 @@ td {
     text-align: center;
 }
 </style>
+
 <h2>Lista de Articulos</h2>
 
 <table class="table">
